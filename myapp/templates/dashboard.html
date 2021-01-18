@@ -1,0 +1,20 @@
+{% extends "myapp/base.html" %}
+{% block content %}
+{% load static%}
+        <h5 class="col-lg-12 col-xs-12">Small Box</h5> {% endcomment %}
+        <div class="row">
+          <div class="col-lg-3 col-xs-6">
+            <!-- small card -->
+            <div class="small-box bg-info">
+              <div class="inner">
+               <h3>{% if total_user %}{{total_user.count}}{% endif %}</h3>
+                <p>Total Customers</p>
+              </div>
+              <div class="icon">
+              <i class="fa fa-fw fa-users"></i>
+            </div>
+              <a href="{% url 'customerlistview' %}" class="small-box-footer">
+                More info <i class="fas fa-arrow-circle-right"></i>
+              </a>
+            </div>
+          </div>
